@@ -40,8 +40,6 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 - [File System](https://nodejs.org/api/fs.html)
 - [HTTP](https://nodejs.org/api/http.html)
 - [Axios](https://www.npmjs.com/package/axios)
