@@ -2,10 +2,6 @@
 
 _Ejercicio para la asignatura programación con tecnologías web, que consiste en desarrollar una aplicación en Node.js que incluya los módulos File System, HTTP y axios._
 
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
 ## Prerequisitos 📋
 
 - [Node.js](https://nodejs.org) mínimo versión 10.14 o más alta
