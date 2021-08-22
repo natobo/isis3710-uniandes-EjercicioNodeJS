@@ -44,8 +44,8 @@ const chargeDataHtml = async (data, dirHtml, type) => {
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nombre contacto</th>
-                    <th scope="col">Nombre compania</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Contacto</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -76,9 +76,9 @@ server.on('request', (request, response) => {
           : 'https://gist.githubusercontent.com/josejbocanegra/986182ce2dd3e6246adcf960f9cda061/raw/f013c156f37c34117c0d4ba9779b15d427fb8dcd/clientes.json'
       )
       .then((axiosResp) => {
-        // Ob
+        // consigue la respuesta de axios segun la peticion
         let respAxiosData = axiosResp.data;
-        // Carga toda la data a
+        // Carga toda la data de la respuesta en el archivo index.html
         chargeDataHtml(respAxiosData, config.dirHtml, pathname);
         // Lee el archivo index.html y lo manda como response en caso que de exista.
         fs.readFile(config.dirHtml, null, (error, data) => {
@@ -95,6 +95,7 @@ server.on('request', (request, response) => {
       })
       .catch((err) => console.error(err));
   } else {
+    // En caso de que no se realice la peticion bien, manda un mensaje 404 explicando cuales son los endpoints a realizar la peticion
     response.writeHead(404);
     response.write(
       `Verify the api petition and try again. It should be /api/proveedores or /api/clientes`
