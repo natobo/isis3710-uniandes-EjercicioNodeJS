@@ -1,0 +1,39 @@
+{
+  "name": "isis3710-uniandes-ejercicionodejs",
+  "version": "1.0.0",
+  "description": "_Ejercicio para la asignatura programación con tecnologías web, que consiste en desarrollar una aplicación en Node.js que incluya los módulos File System, HTTP y axios.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "DEBUG=app:* nodemon server",
+    "start": "NODE_ENV=production node server",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natobo/isis3710-uniandes-EjercicioNodeJS.git"
+  },
+  "keywords": [],
+  "author": "Nicolás Tobo <nicotobo@gmail.com> (natobo)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natobo/isis3710-uniandes-EjercicioNodeJS/issues"
+  },
+  "homepage": "https://github.com/natobo/isis3710-uniandes-EjercicioNodeJS#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
